@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Safety - Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            text-align: center;
+        }
+        .logo {
+            position: absolute;
+            top: -50px;
+            left: 20px;
+            height: 60px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #444;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        input {
+            padding: 12px 12px 12px 40px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #ff7e5f;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #feb47b;
+        }
+        .forgot-password {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #444;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            color: #ff7e5f;
+        }
+        .social-login {
+            margin-top: 20px;
+        }
+        .social-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .social-button i {
+            margin-right: 10px;
+        }
+        .social-button:hover {
+            background-color: #e0e0e0;
+        }
+        .signup {
+            margin-top: 30px;
+            color: #444;
+        }
+        .signup a {
+            color: #ff7e5f;
+            text-decoration: none;
+        }
+        .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <i class="fas fa-shield-alt logo" alt="Women's Safety Logo">AI POWERED SOS APP</i>
+        <h2>Welcome Back</h2>
+
+        <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button onclick="validateLogin()">Login</button>
+
+        <a href="#" class="forgot-password">Forgot your password?</a>
+
+        <div class="social-login">
+            <div class="social-button" onclick="loginWithGoogle()">
+                <i class="fab fa-google"></i> Login with Google
+            </div>
+            <div class="social-button" onclick="loginWithApple()">
+                <i class="fab fa-apple"></i> Login with Apple
+            </div>
+        </div>
+
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            if (username === "user" && password === "123") {
+                window.location.href = "emergency_contacts.html";
+            } else {
+                alert("Invalid credentials. Try again.");
+            }
+        }
+        
+
+        function loginWithGoogle() {
+            alert('Google login not implemented yet.');
+        }
+
+        function loginWithApple() {
+            alert('Apple login not implemented yet.');
+        }
+    </script>
+</body>
+</html>
